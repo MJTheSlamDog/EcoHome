@@ -2,53 +2,202 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoHome Guardian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="EcoHome Guardian - Smart home automation solutions">
+    <title>EcoHome Guardian | Smart Home Automation</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font: Inter (Google Fonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="logo">EcoHome Guardian</div>
         <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Browse</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+            <li><a href="#" aria-current="page">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="signin-btn">Sign In</button>
-        <button class="dark-mode-toggle">🌓</button>
-        <div class="hamburger">☰</div>
+        
+        <div class="nav-buttons">
+            
+            <button class="cart-icon" aria-label="Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+            <button class="signin-btn" aria-label="Sign in"><i class="fas fa-user"></i> Sign In</button>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌓</button>
+            <button class="hamburger" aria-expanded="false" aria-label="Menu">☰</button>
+        </div>
+
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Transform Your Home with Automation</h1>
-        <p>Discover smart solutions tailored for your lifestyle.</p>
-        <button class="cta-btn">Explore Ideas</button>
-    </section>
-
-    <!-- Product Grid Section -->
-    <section class="products hero">
-        <h2>Featured Home Automation Solutions</h2>
-        <div class="product-grid">
-            <div class="product-card">
-            <img src="placeholder-light.jpg" alt="Smart Light" class="product-img">
-            <h3>Smart Lighting</h3>
-            <p>Voice-controlled bulbs for any room.</p>
-            </div>
-            <div class="product-card">
-            <img src="placeholder-security.jpg" alt="Security Kit" class="product-img">
-            <h3>Security Kit</h3>
-            <p>24/7 monitoring with smart cameras.</p>
-            </div>
-            <!-- Add more products as needed -->
+        <div class="hero-content">
+            <h1>Transform Your Home with Automation</h1>
+            <p>Discover smart solutions tailored for your lifestyle.</p>
+            <button class="cta-btn">Explore Ideas</button>
         </div>
     </section>
 
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Featured Smart Home Solutions</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="lighting">Lighting</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="climate">Climate</button>
+    </div>
+    
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="lighting">
+        <div class="product-badge">Popular</div>
+        <img src="https://via.placeholder.com/300x200?text=Smart+Bulbs" alt="Color-changing smart bulbs" class="product-img">
+        <div class="product-info">
+            <h3>Switch Modded arduino</h3>
+            <p class="price">R199.99 <span class="original">R249.99</span></p>
+            <div class="rating">★★★★☆ <span>(342)</span></div>
+            <button class="cta-btn">Add to Cart</button>
+        </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-category="security">
+            <img src="https://via.placeholder.com/300x200?text=Security+Kit" alt="Home security camera" class="product-img">
+            <div class="product-info">
+                <h3>Raspberry Pi with Gardian AI</h3>
+                <p class="price">R299.99</p>
+                <div class="rating">★★★★★ <span>(128)</span></div>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 --><!-- Product 2 -->
+        <div class="product-card" data-category="climate">
+            <img src="https://via.placeholder.com/300x200?text=Security+Kit" alt="Home security camera" class="product-img">
+            <div class="product-info">
+                <h3>Light Modded Arduino</h3>
+                <p class="price">R299.99</p>
+                <div class="rating">★★★★★ <span>(128)</span></div>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+        
+    </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <h2>Smart Home Solutions</h2>
+        <div class="solution-cards">
+            <div class="solution-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Lighting Control</h3>
+                <p>Automate and customize your home lighting</p>
+            </div>
+            <div class="solution-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security Systems</h3>
+                <p>24/7 monitoring and smart alerts</p>
+            </div>
+            <div class="solution-card">
+                <i class="fas fa-thermometer-half"></i>
+                <h3>Climate Control</h3>
+                <p>Energy-efficient temperature management</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About EcoHome Guardian</h2>
+            <p>We're revolutionizing home automation with affordable, user-friendly solutions since 2015. Our team of engineers and designers create products that blend seamlessly into your lifestyle.</p>
+            <div class="team-showcase">
+                <!-- Team members would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    How difficult is installation?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Our products are designed for easy DIY installation with step-by-step guides. Most systems can be set up in under 30 minutes.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Are your products compatible with Alexa/Google Home?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>No! But we have an AI companion that will assist in running your home seamlessly called Gardian.</p>
+                </div>
+            </div>
+            <!-- Add more FAQ items -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+27 12 345 6789</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@ecohomeguardian.co.za</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Smart Street, Johannesburg, South Africa</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">EcoHome Guardian</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 EcoHome Guardian. All rights reserved.
+        </div>
+    </footer>
+
     <script src="script.js"></script>
-    <script src="theme.js"></script>
 </body>
 </html>
